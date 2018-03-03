@@ -1,0 +1,6 @@
+c:\users\user\documents\visual studio 2017\Projects\MathsCal\MathsCal\bin\Debug\MathsCal.exe.config
+c:\users\user\documents\visual studio 2017\Projects\MathsCal\MathsCal\bin\Debug\MathsCal.exe
+c:\users\user\documents\visual studio 2017\Projects\MathsCal\MathsCal\bin\Debug\MathsCal.pdb
+c:\users\user\documents\visual studio 2017\Projects\MathsCal\MathsCal\obj\Debug\MathsCal.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2017\Projects\MathsCal\MathsCal\obj\Debug\MathsCal.exe
+c:\users\user\documents\visual studio 2017\Projects\MathsCal\MathsCal\obj\Debug\MathsCal.pdb
