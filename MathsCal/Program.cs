@@ -12,7 +12,7 @@ namespace MathsCal
         {
             Console.WriteLine("What is your name");
             string name = Console.ReadLine();
-            Console.WriteLine("Oh hi {0}", name);
+            Console.WriteLine("Oh hi {0} you good looking fella", name);
             
             while (true)
             {
@@ -94,36 +94,66 @@ namespace MathsCal
                 Random r = new Random();
                 int rInt1 = r.Next(1, 10);
                 int rInt2 = r.Next(1, 10);
-                Console.WriteLine("What is {0} {1} {2} ?", rInt1, op, rInt2);
-                if (op == "+")
+                if (op == "/")
                 {
-                    answer = rInt1 + rInt2;
-                }
-                else if (op == "-")
-                {
-                    answer = rInt1 - rInt2;
-                }
-                else if (op == "x")
-                {
-                    answer = rInt1 * rInt2;
-                }
-                else
-                {
-                    answer = rInt1 / rInt2;
-                }
-                userAnswer = Convert.ToInt32(Console.ReadLine());
+                    double higherNumber = Convert.ToDouble( Math.Max(rInt1, rInt2));
+                    double lowerNumber = Convert.ToDouble(Math.Min(rInt1, rInt2));
+                    Console.WriteLine("What is {0} {1} {2} ?", higherNumber, op, lowerNumber);
+                    double divAnswer = higherNumber / lowerNumber;
 
-                if (answer == userAnswer)
-                {
-                    Console.WriteLine("That was the right answer");
-                    correctCount++;
+                    double divUserAnswer = Convert.ToDouble(Console.ReadLine());
+
+                    if (divUserAnswer == divAnswer)
+                    {
+                        Console.WriteLine("That was the right answer");
+                        correctCount++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The correct answer is {0}", divAnswer);
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("The correct answer is {0}", answer);
+                    Console.WriteLine("What is {0} {1} {2} ?", rInt1, op, rInt2);
+                    if (op == "+")
+                    {
+                        answer = rInt1 + rInt2;
+                    }
+                    else if (op == "-")
+                    {
+                        answer = rInt1 - rInt2;
+                    }
+                    else
+                    {
+                        answer = rInt1 * rInt2;
+                    }
+
+                    userAnswer = Convert.ToInt32(Console.ReadLine());
+
+                    if (answer == userAnswer)
+                    {
+                        Console.WriteLine("That was the right answer");
+                        correctCount++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The correct answer is {0}", answer);
+                    }
                 }
             }
-            Console.WriteLine("Your total score is {0}/{1}", correctCount, qNo);
+            double passRate = Convert.ToDouble(correctCount) / Convert.ToDouble(qNo);
+            double passPercentage = passRate * 100.0;
+            if (passPercentage > 50)
+            {
+                Console.WriteLine("You did alright, your total score is {0}/{1}", correctCount, qNo);
+                Console.WriteLine("You have a pass rate of {0}%", passPercentage);
+            }
+            else
+            {
+                Console.WriteLine("Olodo!!! Your total score is {0}/{1}", correctCount, qNo);
+                Console.WriteLine("You have a pass rate of {0}%", passPercentage);
+            }
         }
         public static void difficulty2(string op)
         {
@@ -155,36 +185,66 @@ namespace MathsCal
                 Random r = new Random();
                 int rInt1 = r.Next(10, 100);
                 int rInt2 = r.Next(10, 100);
-                Console.WriteLine("What is {0} {1} {2} ?", rInt1, op, rInt2);
-                if (op == "+")
+                if (op == "/")
                 {
-                    answer = rInt1 + rInt2;
-                }
-                else if (op == "-")
-                {
-                    answer = rInt1 - rInt2;
-                }
-                else if (op == "x")
-                {
-                    answer = rInt1 * rInt2;
-                }
-                else
-                {
-                    answer = rInt1 / rInt2;
-                }
-                userAnswer = Convert.ToInt32(Console.ReadLine());
+                    double higherNumber = Convert.ToDouble(Math.Max(rInt1, rInt2));
+                    double lowerNumber = Convert.ToDouble(Math.Min(rInt1, rInt2));
+                    Console.WriteLine("What is {0} {1} {2} ?", higherNumber, op, lowerNumber);
+                    double divAnswer = higherNumber / lowerNumber;
 
-                if (answer == userAnswer)
-                {
-                    Console.WriteLine("That was the right answer");
-                    correctCount++;
+                    double divUserAnswer = Convert.ToDouble(Console.ReadLine());
+
+                    if (divUserAnswer == divAnswer)
+                    {
+                        Console.WriteLine("That was the right answer");
+                        correctCount++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The correct answer is {0}", divAnswer);
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("The correct answer is {0}", answer);
+                    Console.WriteLine("What is {0} {1} {2} ?", rInt1, op, rInt2);
+                    if (op == "+")
+                    {
+                        answer = rInt1 + rInt2;
+                    }
+                    else if (op == "-")
+                    {
+                        answer = rInt1 - rInt2;
+                    }
+                    else
+                    {
+                        answer = rInt1 * rInt2;
+                    }
+
+                    userAnswer = Convert.ToInt32(Console.ReadLine());
+
+                    if (answer == userAnswer)
+                    {
+                        Console.WriteLine("That was the right answer");
+                        correctCount++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The correct answer is {0}", answer);
+                    }
                 }
             }
-            Console.WriteLine("Your total score is {0}/{1}", correctCount, qNo);
+            double passRate = Convert.ToDouble(correctCount) / Convert.ToDouble(qNo);
+            double passPercentage = passRate * 100.0;
+            if (passPercentage > 50)
+            {
+                Console.WriteLine("You did alright, your total score is {0}/{1}", correctCount, qNo);
+                Console.WriteLine("You have a pass rate of {0}%", passPercentage);
+            }
+            else
+            {
+                Console.WriteLine("Olodo!!! Your total score is {0}/{1}", correctCount, qNo);
+                Console.WriteLine("You have a pass rate of {0}%", passPercentage);
+            }
         }
         public static void difficulty3(string op)
         {
@@ -216,36 +276,66 @@ namespace MathsCal
                 Random r = new Random();
                 int rInt1 = r.Next(100, 10000);
                 int rInt2 = r.Next(100, 10000);
-                Console.WriteLine("What is {0} {1} {2} ?", rInt1, op, rInt2);
-                if (op == "+")
+                if (op == "/")
                 {
-                    answer = rInt1 + rInt2;
-                }
-                else if (op == "-")
-                {
-                    answer = rInt1 - rInt2;
-                }
-                else if (op == "x")
-                {
-                    answer = rInt1 * rInt2;
-                }
-                else
-                {
-                    answer = rInt1 / rInt2;
-                }
-                userAnswer = Convert.ToInt32(Console.ReadLine());
+                    double higherNumber = Convert.ToDouble(Math.Max(rInt1, rInt2));
+                    double lowerNumber = Convert.ToDouble(Math.Min(rInt1, rInt2));
+                    Console.WriteLine("What is {0} {1} {2} ?", higherNumber, op, lowerNumber);
+                    double divAnswer = higherNumber / lowerNumber;
 
-                if (answer == userAnswer)
-                {
-                    Console.WriteLine("That was the right answer");
-                    correctCount++;
+                    double divUserAnswer = Convert.ToDouble(Console.ReadLine());
+
+                    if (divUserAnswer == divAnswer)
+                    {
+                        Console.WriteLine("That was the right answer");
+                        correctCount++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The correct answer is {0}", divAnswer);
+                    }
                 }
                 else
                 {
-                    Console.WriteLine("The correct answer is {0}", answer);
+                    Console.WriteLine("What is {0} {1} {2} ?", rInt1, op, rInt2);
+                    if (op == "+")
+                    {
+                        answer = rInt1 + rInt2;
+                    }
+                    else if (op == "-")
+                    {
+                        answer = rInt1 - rInt2;
+                    }
+                    else
+                    {
+                        answer = rInt1 * rInt2;
+                    }
+
+                    userAnswer = Convert.ToInt32(Console.ReadLine());
+
+                    if (answer == userAnswer)
+                    {
+                        Console.WriteLine("That was the right answer");
+                        correctCount++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("The correct answer is {0}", answer);
+                    }
                 }
             }
-            Console.WriteLine("Your total score is {0}/{1}", correctCount, qNo);
+            double passRate = Convert.ToDouble(correctCount) / Convert.ToDouble(qNo);
+            double passPercentage = passRate * 100.0;
+            if (passPercentage > 50)
+            {
+                Console.WriteLine("You did alright, your total score is {0}/{1}", correctCount, qNo);
+                Console.WriteLine("You have a pass rate of {0}%", passPercentage);
+            }
+            else
+            {
+                Console.WriteLine("Olodo!!! Your total score is {0}/{1}", correctCount, qNo);
+                Console.WriteLine("You have a pass rate of {0}%", passPercentage);
+            }
         }
     }
 }
